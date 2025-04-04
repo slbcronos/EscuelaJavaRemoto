@@ -18,9 +18,9 @@ import javax.swing.JOptionPane;
  */
 public class persona extends javax.swing.JFrame {
     
-    public static final String URL = "jdbc:mysql://a2nlmysql55plsk.secureserver.net:3306/Escuela";    //jdbc:mysql://localhost:3306/Escuela
-    public static final String USERNAME = "slb_18"; //root
-    public static final String PASSWORD = "Mufasa1511";
+    public static final String URL = "jdbc:mysql://mx78.hostgator.mx:3306/modelost_escuela";    //jdbc:mysql://localhost:3306/Escuela
+    public static final String USERNAME = "modelost_AdminModelos"; //root
+    public static final String PASSWORD = "Lomogel1511$";
     
     PreparedStatement ps;
     ResultSet  rs;
@@ -93,6 +93,11 @@ public class persona extends javax.swing.JFrame {
         jLabel7.setText("Fecha Nac:");
 
         cmbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "N/A", "Masculino", "Femenino" }));
+        cmbGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbGeneroActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Genero:");
 
@@ -414,6 +419,10 @@ public class persona extends javax.swing.JFrame {
     private void cmdLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLimpiarActionPerformed
         limpiarCajas();
     }//GEN-LAST:event_cmdLimpiarActionPerformed
+
+    private void cmbGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbGeneroActionPerformed
 
     public static Connection getConection() {
 
